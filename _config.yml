@@ -1,0 +1,30 @@
+# 사이트 설정
+title: 내 GitHub 블로그
+description: Jekyll 테마를 사용한 GitHub Pages 블로그
+baseurl: "" # 저장소 이름이 username.github.io인 경우 비워 둡니다
+url: "https://Gorani77.github.io"
+
+# 테마 설정 (원하는 테마로 변경하세요)
+# GitHub Pages에서 자동으로 지원하는 테마 중 하나를 선택할 수 있습니다
+# 예: minima, jekyll-theme-minimal, jekyll-theme-cayman 등
+theme: minima
+
+# 소셜 링크 (선택 사항)
+social:
+  github: Gorani77
+  # twitter: your-twitter-handle
+  # facebook: your-facebook-handle
+
+# 빌드 설정
+markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# 제외할 파일 및 폴더
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - README.md 
