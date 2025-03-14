@@ -1,13 +1,19 @@
 source "https://rubygems.org"
 
-gem "jekyll", "~> 4.2.0"
-# 사용하려는 테마로 변경하세요. 기본값은 minima입니다.
-gem "minima", "~> 2.5"
+# Jekyll 설치
+gem "jekyll", "~> 4.3.2"
 
-# GitHub Pages와 호환되도록 다음 플러그인을 사용합니다
+# 테마 설정 - chirpy 테마 사용
+gem "jekyll-theme-chirpy", "~> 6.3.1"
+
+# 필수 플러그인
 group :jekyll_plugins do
-  gem "jekyll-feed", "~> 0.12"
-  gem "jekyll-seo-tag", "~> 2.7"
+  gem "jekyll-paginate"
+  gem "jekyll-redirect-from"
+  gem "jekyll-seo-tag"
+  gem "jekyll-archives"
+  gem "jekyll-sitemap"
+  gem "jekyll-feed"
 end
 
 # Windows와 JRuby는 일반적으로 tzinfo-data 젬이 필요합니다
