@@ -1,17 +1,30 @@
-# GitHub 블로그
+# Gorani77 기술 블로그
 
-이 저장소는 [GitHub Pages](https://pages.github.com/)를 사용하여, Jekyll 기반의 개인 블로그를 호스팅하는 저장소입니다.
+이 저장소는 [GitHub Pages](https://pages.github.com/)를 사용하여 호스팅되는 개인 기술 블로그입니다.
 
 ## 주요 특징
 
 - GitHub Pages 호스팅
-- Jekyll 정적 사이트 생성기 사용
-- 사용자 정의 테마 적용 가능
-- 마크다운으로 작성된 콘텐츠
+- 순수 HTML, CSS, JavaScript로 개발
+- 반응형 디자인
+- 방문자 카운터 기능
+
+## 구조
+
+- `index.html` - 메인 페이지
+- `categories.html` - 카테고리 페이지
+- `tags.html` - 태그 페이지
+- `about.html` - 소개 페이지
+- `css/style.css` - 스타일시트
+- `js/` - JavaScript 파일들
+  - `main.js` - 기본 기능
+  - `posts.js` - 게시물 관련 기능
+  - `counter.js` - 방문자 카운터 기능
+- `posts/` - 블로그 게시물
 
 ## 로컬에서 실행하기
 
-이 블로그를 로컬에서 실행하려면 Ruby와 Jekyll이 설치되어 있어야 합니다:
+이 블로그는 빌드 과정 없이 실행할 수 있습니다:
 
 1. 저장소 클론:
    ```
@@ -19,22 +32,7 @@
    cd Gorani77.github.io
    ```
 
-2. 의존성 설치:
-   ```
-   bundle install
-   ```
-
-3. 로컬 서버 실행:
-   ```
-   bundle exec jekyll serve
-   ```
-
-4. 브라우저에서 `http://localhost:4000`으로 접속
-
-## 테마 변경하기
-
-1. `_config.yml` 파일에서 `theme` 속성을 변경합니다.
-2. 또는 커스텀 테마를 적용하려면 관련 파일을 다운로드하여 저장소에 추가합니다.
+2. 웹 브라우저에서 `index.html` 파일을 엽니다.
 
 ## 라이센스
 
