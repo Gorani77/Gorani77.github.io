@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!-- 문서의 기본 정보 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>태그 - Gorani77의 기술 블로그</title>
+    
+    <!-- 외부 CSS 파일 연결 -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Font Awesome 아이콘 라이브러리 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* 태그 페이지 전용 스타일 */
+        .tag-title {
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #dee2e6;
+        }
+        
+        .tags-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+        
+        .tag-item-large {
+            background-color: #e9ecef;
+            color: #495057;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: background-color 0.3s;
+        }
+        
+        .tag-item-large:hover {
+            background-color: #0d6efd;
+            color: white;
+        }
+        
+        .tag-item-large.active {
+            background-color: #0d6efd;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- 헤더 영역 -->
+    <header>
+        <div class="container">
+            <h1>Gorani77의 기술 블로그</h1>
+            <p>프로그래밍과 관련된 다양한 주제를 다룹니다</p>
+        </div>
+    </header>
+
+    <!-- 네비게이션 영역 -->
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="index.html">홈</a></li>
+                <li><a href="categories.html">카테고리</a></li>
+                <li><a href="tags.html" class="active">태그</a></li>
+                <li><a href="about.html">소개</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 메인 콘텐츠 영역 -->
+    <main>
+        <div class="container">
+            <!-- 태그 섹션 -->
+            <section>
+                <h2 class="tag-title">태그</h2>
+                
+                <!-- 태그 목록 -->
+                <div class="tags-list" id="all-tags">
+                    <!-- 태그는 JavaScript로 동적으로 로드됩니다 -->
+                </div>
+                
+                <!-- 선택된 태그의 게시물 -->
+                <div id="tag-posts">
+                    <h3 id="selected-tag">모든 게시물</h3>
+                    <div id="posts-container">
+                        <!-- 게시물은 JavaScript로 동적으로 로드됩니다 -->
+                        <div class="loading">게시물을 불러오는 중...</div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- 사이드바 영역 -->
+    <aside>
+        <div class="sidebar-container">
+            <!-- 카테고리 섹션 -->
+            <section class="categories">
+                <h3>카테고리</h3>
+                <ul id="categories-list">
+                    <!-- 카테고리는 JavaScript로 동적으로 로드됩니다 -->
+                </ul>
+            </section>
+
+            <!-- 태그 섹션 -->
+            <section class="tags">
+                <h3>태그</h3>
+                <div id="tags-cloud">
+                    <!-- 태그는 JavaScript로 동적으로 로드됩니다 -->
+                </div>
+            </section>
+
+            <!-- 방문자 카운터 -->
+            <section class="visitor-counter">
+                <h3>방문 통계</h3>
+                <div>
+                    <p><i class="fas fa-user"></i> <span id="visitor-count">0</span> 방문자</p>
+                    <p><i class="fas fa-eye"></i> <span id="page-views">0</span> 조회수</p>
+                </div>
+            </section>
+        </div>
+    </aside>
+
+    <!-- 푸터 영역 -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Gorani77. All rights reserved.</p>
+            <p>
+                <a href="https://github.com/Gorani77" target="_blank">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- 외부 JavaScript 파일 연결 -->
+    <script src="js/main.js"></script>
+    <script src="js/posts.js"></script>
+    <script src="js/counter.js"></script>
+    
+    <!-- 태그 페이지 전용 스크립트 -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // 모든 태그 목록 로드
+            loadAllTags();
+            
+            // URL에서 선택된 태그 가져오기
+            const selectedTag = getQueryParam('tag');
+            
+            // 선택된 태그가 있으면 해당 태그의 게시물 표시
+            if (selectedTag) {
+                document.getElementById('selected-tag').textContent = `#${selectedTag}`;
+                // 여기서 선택된 태그의 게시물을 필터링하는 로직을 추가할 수 있음
+            }
+        });
+        
+        /**
+         * 모든 태그 목록을 로드하는 함수
+         */
+        function loadAllTags() {
+            // 태그 데이터 (실제로는 서버나 JSON 파일에서 가져올 수 있음)
+            const tags = [
+                { name: 'AI', count: 1 },
+                { name: '면접', count: 1 },
+                { name: '프로젝트', count: 1 }
+            ];
+            
+            // 태그 목록을 표시할 요소 가져오기
+            const allTagsContainer = document.getElementById('all-tags');
+            
+            // 태그가 없거나 요소가 없으면 함수 종료
+            if (!tags || !allTagsContainer) return;
+            
+            // 모든 게시물 링크 추가
+            const allPostsLink = document.createElement('a');
+            allPostsLink.href = 'tags.html';
+            allPostsLink.className = 'tag-item-large' + (!getQueryParam('tag') ? ' active' : '');
+            allPostsLink.textContent = '모든 게시물';
+            allTagsContainer.appendChild(allPostsLink);
+            
+            // 각 태그에 대해 HTML 생성
+            tags.forEach(tag => {
+                const tagLink = document.createElement('a');
+                tagLink.href = `tags.html?tag=${encodeURIComponent(tag.name)}`;
+                tagLink.className = 'tag-item-large' + (getQueryParam('tag') === tag.name ? ' active' : '');
+                tagLink.textContent = `#${tag.name} (${tag.count})`;
+                allTagsContainer.appendChild(tagLink);
+            });
+        }
+    </script>
+</body>
+</html> 
