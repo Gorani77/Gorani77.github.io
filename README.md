@@ -1,79 +1,43 @@
-# Gorani77 기술 블로그
+# Chirpy Starter
 
-이 저장소는 [GitHub Pages](https://pages.github.com/)를 사용하여 호스팅되는 개인 기술 블로그입니다.
-Chirpy Jekyll 테마를 사용하여 제작되었습니다.
+[![Gem Version](https://img.shields.io/gem/v/jekyll-theme-chirpy)][gem]&nbsp;
+[![GitHub license](https://img.shields.io/github/license/cotes2020/chirpy-starter.svg?color=blue)][mit]
 
-## 주요 특징
+When installing the [**Chirpy**][chirpy] theme through [RubyGems.org][gem], Jekyll can only read files in the folders
+`_data`, `_layouts`, `_includes`, `_sass` and `assets`, as well as a small part of options of the `_config.yml` file
+from the theme's gem. If you have ever installed this theme gem, you can use the command
+`bundle info --path jekyll-theme-chirpy` to locate these files.
 
-- GitHub Pages 호스팅
-- Jekyll 기반 정적 웹사이트
-- Chirpy 테마 사용
-- 반응형 디자인
-- 방문자 카운터 기능
-- 다크 모드 지원
-- 계층형 카테고리
-- 검색 기능
-- SEO 최적화
+The Jekyll team claims that this is to leave the ball in the user’s court, but this also results in users not being
+able to enjoy the out-of-the-box experience when using feature-rich themes.
 
-## 사용된 Chirpy 테마 특징
+To fully use all the features of **Chirpy**, you need to copy the other critical files from the theme's gem to your
+Jekyll site. The following is a list of targets:
 
-- 다크 테마
-- 지역화된 UI 언어
-- 홈 페이지의 고정 게시물
-- 계층적 카테고리
-- 인기 태그
-- 목차
-- 마지막 수정 날짜
-- 구문 강조
-- 수학 표현식
-- Mermaid 다이어그램 및 순서도
-- 다크 모드 이미지
-- 미디어 삽입
-- 댓글 시스템
-- 내장 검색
-- PWA
-- 웹 분석
-- SEO 및 성능 최적화
+```shell
+.
+├── _config.yml
+├── _plugins
+├── _tabs
+└── index.html
+```
 
-## 구조
+To save you time, and also in case you lose some files while copying, we extract those files/configurations of the
+latest version of the **Chirpy** theme and the [CD][CD] workflow to here, so that you can start writing in minutes.
 
-- `index.html` - 메인 페이지
-- `categories.html` - 카테고리 페이지
-- `tags.html` - 태그 페이지
-- `about.html` - 소개 페이지
-- `css/style.css` - 스타일시트
-- `js/` - JavaScript 파일들
-  - `main.js` - 기본 기능
-  - `posts.js` - 게시물 관련 기능
-  - `counter.js` - 방문자 카운터 기능
-- `posts/` - 블로그 게시물
+## Usage
 
-## 로컬에서 실행하기
+Check out the [theme's docs](https://github.com/cotes2020/jekyll-theme-chirpy/wiki).
 
-이 블로그를 로컬에서 실행하려면:
+## Contributing
 
-1. 저장소 클론:
-   ```
-   git clone https://github.com/Gorani77/Gorani77.github.io.git
-   cd Gorani77.github.io
-   ```
+This repository is automatically updated with new releases from the theme repository. If you encounter any issues or want to contribute to its improvement, please visit the [theme repository][chirpy] to provide feedback.
 
-2. 의존성 설치:
-   ```
-   bundle install
-   ```
+## License
 
-3. 로컬 서버 실행:
-   ```
-   bundle exec jekyll serve
-   ```
+This work is published under [MIT][mit] License.
 
-4. 브라우저에서 `http://localhost:4000` 접속
-
-## 라이센스
-
-이 프로젝트는 MIT 라이센스 하에 제공됩니다.
-
-## 크레딧
-
-이 프로젝트는 [Chirpy Jekyll 테마](https://github.com/cotes2020/jekyll-theme-chirpy)를 기반으로 제작되었습니다.
+[gem]: https://rubygems.org/gems/jekyll-theme-chirpy
+[chirpy]: https://github.com/cotes2020/jekyll-theme-chirpy/
+[CD]: https://en.wikipedia.org/wiki/Continuous_deployment
+[mit]: https://github.com/cotes2020/chirpy-starter/blob/master/LICENSE

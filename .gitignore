@@ -25,12 +25,3 @@ package-lock.json
 # Misc
 _sass/vendors
 assets/js/dist
-
-# macOS
-.DS_Store
-
-# 로그 파일
-*.log
-
-# 임시 파일
-*.tmp
