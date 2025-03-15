@@ -1,45 +1,62 @@
 # The Site Configuration
+# 이 파일은 Jekyll 블로그의 전체 설정을 정의합니다.
+# 여기서 변경한 설정은 블로그 전체에 적용됩니다.
 
 # Import the theme
+# Chirpy는 Jekyll 테마 중 하나로, 깔끔한 디자인과 다양한 기능을 제공합니다.
 theme: jekyll-theme-chirpy
 
 # The language of the webpage › http://www.lingoes.net/en/translator/langcode.htm
 # If it has the same name as one of the files in folder `_data/locales`, the layout language will also be changed,
 # otherwise, the layout language will use the default value of 'en'.
-lang: en
+# 
+# 언어 설정: ko-KR은 한국어를 의미합니다.
+# _data/locales 폴더에 같은 이름의 파일이 있으면 해당 언어로 UI가 변경됩니다.
+lang: ko-KR
 
 # Change to your timezone › https://kevinnovak.github.io/Time-Zone-Picker
-timezone: Asia/Shanghai
+# 
+# 시간대 설정: Asia/Seoul은 한국 표준시(KST)를 의미합니다.
+# 포스트의 발행 시간 등이 이 시간대를 기준으로 표시됩니다.
+timezone: Asia/Seoul
 
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: Chirpy # the main title
+# 블로그의 메인 제목 - 브라우저 탭과 사이트 헤더에 표시됩니다.
+title: Gorani77 # the main title
 
-tagline: A text-focused Jekyll theme # it will display as the subtitle
+# 블로그의 부제목 - 메인 제목 아래에 작게 표시됩니다.
+tagline: 개인 기술 블로그 # it will display as the subtitle
 
+# SEO 및 RSS 피드에 사용되는 블로그 설명
+# > 기호는 YAML의 여러 줄 문자열을 나타냅니다.
 description: >- # used by seo meta and the atom feed
-  A minimal, responsive and feature-rich Jekyll theme for technical writing.
+  Gorani77의 개인 기술 블로그입니다. 프로그래밍과 관련된 다양한 주제를 다룹니다.
 
 # Fill in the protocol & hostname for your site.
 # E.g. 'https://username.github.io', note that it does not end with a '/'.
-url: ""
+# 
+# 사이트 URL: GitHub Pages에 호스팅되는 사이트의 전체 URL입니다.
+# 끝에 슬래시(/)를 포함하지 않아야 합니다.
+url: "https://Gorani77.github.io"
 
 github:
-  username: github_username # change to your GitHub username
+  username: Gorani77 # change to your GitHub username
 
 twitter:
-  username: twitter_username # change to your Twitter username
+  username: # change to your Twitter username
 
+# 사용자 정보 설정
+# 포스트 작성자 및 저작권 표시에 사용됩니다.
 social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
-  name: your_full_name
-  email: example@domain.com # change to your email address
+  name: Gorani77
+  email: sp2877@naver.com # change to your email address
   links:
     # The first element serves as the copyright owner's link
-    - https://twitter.com/username # change to your Twitter homepage
-    - https://github.com/username # change to your GitHub homepage
+    - https://github.com/Gorani77 # change to your GitHub homepage
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
     # - https://www.linkedin.com/in/username
@@ -57,6 +74,7 @@ webmaster_verifications:
 # The end of `jekyll-seo-tag` settings
 
 # Web Analytics Settings
+# 웹 분석 설정: 방문자 추적 및 통계를 위한 각종 서비스 ID를 설정합니다.
 analytics:
   google:
     id: # fill in your Google Analytics ID
@@ -73,7 +91,8 @@ analytics:
   fathom:
     id: # fill in your Fathom Site ID
 
-# Page views settings
+# 페이지 조회수 제공자 설정
+# 현재는 goatcounter만 지원됩니다.
 pageviews:
   provider: # now only supports 'goatcounter'
 
@@ -88,29 +107,36 @@ pageviews:
 #     light — Use the light color scheme
 #     dark — Use the dark color scheme
 #
+# 테마 색상 모드 설정:
+# - 비워두면 시스템 기본 설정을 따릅니다.
+# - light: 항상 라이트 모드를 사용합니다.
+# - dark: 항상 다크 모드를 사용합니다.
+# 사이드바 하단에 모드 전환 토글이 표시됩니다.
 theme_mode: # [light | dark]
 
-# The CDN endpoint for media resources.
-# Notice that once it is assigned, the CDN url
-# will be added to all media resources (site avatar, posts' images, audio and video files) paths starting with '/'
-#
-# e.g. 'https://cdn.com'
+# CDN 엔드포인트 설정
+# 미디어 리소스(아바타, 이미지, 오디오, 비디오 등)의 경로 앞에 붙는 URL입니다.
+# CDN을 사용할 경우 여기에 URL을 입력하세요.
 cdn: "https://chirpy-img.netlify.app"
 
-# the avatar on sidebar, support local or CORS resources
+# 사이드바에 표시될 아바타 이미지 설정
+# 로컬 경로나 외부 URL을 사용할 수 있습니다.
 avatar: "/commons/avatar.jpg"
 
-# The URL of the site-wide social preview image used in SEO `og:image` meta tag.
-# It can be overridden by a customized `page.image` in front matter.
+# 블로그 전체에 적용되는 소셜 미리보기 이미지
+# 페이지별로 다른 이미지를 사용하려면 front matter에서 'image' 속성을 설정하세요.
 social_preview_image: # string, local or CORS resources
 
-# boolean type, the global switch for TOC in posts.
+# 포스트의 목차(Table of Contents) 표시 여부
+# true로 설정하면 모든 포스트에 목차가 표시됩니다.
 toc: true
 
+# 댓글 시스템 설정
 comments:
-  # Global switch for the post-comment system. Keeping it empty means disabled.
+  # 전역 댓글 시스템 활성화 설정
+  # 비워두면 댓글 기능이 비활성화됩니다.
   provider: # [disqus | utterances | giscus]
-  # The provider options are as follows:
+  # 각 제공자별 설정:
   disqus:
     shortname: # fill with the Disqus shortname. › https://help.disqus.com/en/articles/1717111-what-s-a-shortname
   # utterances settings › https://utteranc.es/
@@ -129,7 +155,8 @@ comments:
     lang: # optional, default to the value of `site.lang`
     reactions_enabled: # optional, default to the value of `1`
 
-# Self-hosted static assets, optional › https://github.com/cotes2020/chirpy-static-assets
+# 자체 호스팅 정적 자산 설정
+# 테마의 정적 파일(CSS, JS 등)을 자체 서버에서 호스팅하고 싶을 때 사용합니다.
 assets:
   self_host:
     enabled: # boolean, keep empty means false
@@ -137,6 +164,8 @@ assets:
     # only works if `assets.self_host.enabled` is 'true'
     env: # [development | production]
 
+# PWA(Progressive Web App) 설정
+# 블로그를 모바일 앱처럼 설치하고 오프라인에서도 볼 수 있게 해줍니다.
 pwa:
   enabled: true # The option for PWA feature (installable)
   cache:
@@ -147,13 +176,16 @@ pwa:
     deny_paths:
       # - "/example"  # URLs match `<SITE_URL>/example/*` will not be cached by the PWA
 
+# 페이지네이션 설정: 한 페이지당 표시할 포스트 수입니다.
 paginate: 10
 
-# The base URL of your site
+# 사이트의 기본 URL 경로
+# 대부분의 경우 비워두거나 /로 설정합니다.
 baseurl: ""
 
-# ------------ The following options are not recommended to be modified ------------------
+# ------------ 아래 옵션들은 수정을 권장하지 않습니다 ------------------
 
+# 마크다운 처리 설정
 kramdown:
   footnote_backlink: "&#8617;&#xfe0e;"
   syntax_highlighter: rouge
@@ -166,11 +198,15 @@ kramdown:
       line_numbers: true
       start_line: 1
 
+# 콜렉션 설정
+# tabs 콜렉션은 사이드바 탭 메뉴를 위한 것입니다.
 collections:
   tabs:
     output: true
     sort_by: order
 
+# 기본값 설정
+# 특정 경로나 타입에 대한 기본 레이아웃과 속성을 정의합니다.
 defaults:
   - scope:
       path: "" # An empty string here means all files in the project
@@ -193,9 +229,12 @@ defaults:
       layout: page
       permalink: /:title/
 
+# SASS/SCSS 처리 설정
 sass:
   style: compressed
 
+# HTML 압축 설정
+# 생성된 HTML 파일의 크기를 줄이기 위한 설정입니다.
 compress_html:
   clippings: all
   comments: all
@@ -205,6 +244,8 @@ compress_html:
   ignore:
     envs: [development]
 
+# 빌드 제외 파일 설정
+# 이 목록에 있는 파일과 디렉토리는 Jekyll 빌드 과정에서 제외됩니다.
 exclude:
   - "*.gem"
   - "*.gemspec"
@@ -216,6 +257,8 @@ exclude:
   - rollup.config.js
   - "package*.json"
 
+# 카테고리 및 태그 페이지 설정
+# Jekyll Archives 플러그인을 사용하여 카테고리와 태그 페이지를 생성합니다.
 jekyll-archives:
   enabled: [categories, tags]
   layouts:
