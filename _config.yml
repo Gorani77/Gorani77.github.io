@@ -27,7 +27,7 @@ timezone: Asia/Seoul
 title: Gorani77 # the main title
 
 # 블로그의 부제목 - 메인 제목 아래에 작게 표시됩니다.
-tagline: 개인 기술 블로그 # it will display as the subtitle
+tagline: https://github.com/Gorani77 # it will display as the subtitle
 
 # SEO 및 RSS 피드에 사용되는 블로그 설명
 # > 기호는 YAML의 여러 줄 문자열을 나타냅니다.
@@ -121,7 +121,7 @@ cdn: "https://chirpy-img.netlify.app"
 
 # 사이드바에 표시될 아바타 이미지 설정
 # 로컬 경로나 외부 URL을 사용할 수 있습니다.
-avatar: "/commons/avatar.jpg"
+avatar: "https://github.com/Gorani77.png"
 
 # 블로그 전체에 적용되는 소셜 미리보기 이미지
 # 페이지별로 다른 이미지를 사용하려면 front matter에서 'image' 속성을 설정하세요.
